@@ -3,8 +3,10 @@
 
 <head>
     <meta charset="utf-8">
-    <title>Klinik - Clinic Website Template</title>
+    <title>Dinotopia</title>
+    <link rel="icon" type="image/png" href="images/T Rex Icon.png">
     <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
     <meta content="" name="keywords">
     <meta content="" name="description">
 
@@ -54,6 +56,10 @@
                     <small class="far fa-clock text-primary me-2"></small>
                     <small>Mon - Fri : 09.00 AM - 09.00 PM</small>
                 </div>
+                <div class="h-100 d-inline-flex align-items-center py-3">
+                    <small class="far fa-clock text-primary me-2"></small>
+                    <small>距離2024年1月1日<class="timer">還有<span id="day"></span>天<span id="hour"></span>小時<span id="min"></span>分<span id="sec"></span>秒</small>
+                </div>
             </div>
             <div class="col-lg-5 px-5 text-end">
                 <div class="h-100 d-inline-flex align-items-center py-3 me-4">
@@ -82,6 +88,8 @@
         </button>
         <div class="collapse navbar-collapse" id="navbarCollapse">
             <div class="navbar-nav ms-auto p-4 p-lg-0">
+                <a href="Test.html" class="nav-item nav-link">Test</a>
+                <a href="Ajax.html" class="nav-item nav-link">Ajax</a>
                 <a href="index.html" class="nav-item nav-link active">Home</a>
                 <a href="about.html" class="nav-item nav-link">About</a>
                 <a href="service.html" class="nav-item nav-link">Service</a>
@@ -335,7 +343,7 @@
                 <div class="col-lg-3 col-md-6 wow fadeInUp" data-wow-delay="0.1s">
                     <div class="team-item position-relative rounded overflow-hidden">
                         <div class="overflow-hidden">
-                            <img class="img-fluid" src="img/team-1.jpg" alt="">
+                            <img class="img-fluid" src="DinoImgs/TRex.jpg" alt="">
                         </div>
                         <div class="team-text bg-light text-center p-4">
                             <h5>Doctor Name</h5>
@@ -351,7 +359,7 @@
                 <div class="col-lg-3 col-md-6 wow fadeInUp" data-wow-delay="0.3s">
                     <div class="team-item position-relative rounded overflow-hidden">
                         <div class="overflow-hidden">
-                            <img class="img-fluid" src="img/team-2.jpg" alt="">
+                            <img class="img-fluid" src="DinoImgs/Trex 2.jpg" alt="">
                         </div>
                         <div class="team-text bg-light text-center p-4">
                             <h5>Doctor Name</h5>
@@ -367,7 +375,7 @@
                 <div class="col-lg-3 col-md-6 wow fadeInUp" data-wow-delay="0.5s">
                     <div class="team-item position-relative rounded overflow-hidden">
                         <div class="overflow-hidden">
-                            <img class="img-fluid" src="img/team-3.jpg" alt="">
+                            <img class="img-fluid" src="DinoImgs/TRex_R.png" alt="">
                         </div>
                         <div class="team-text bg-light text-center p-4">
                             <h5>Doctor Name</h5>
@@ -383,7 +391,7 @@
                 <div class="col-lg-3 col-md-6 wow fadeInUp" data-wow-delay="0.7s">
                     <div class="team-item position-relative rounded overflow-hidden">
                         <div class="overflow-hidden">
-                            <img class="img-fluid" src="img/team-4.jpg" alt="">
+                            <img class="img-fluid" src="DinoImgs/Trex_2_R.png" alt="">
                         </div>
                         <div class="team-text bg-light text-center p-4">
                             <h5>Doctor Name</h5>
@@ -595,6 +603,39 @@
 
     <!-- Template Javascript -->
     <script src="js/main.js"></script>
+
+    <!-- Countdown -->
+    <script>
+    var countdown = function(due) {
+        var now = new Date();
+    
+        var rest = due.getTime() - now.getTime();
+        var sec = Math.floor(rest / 1000 % 60);
+        var min = Math.floor(rest / 1000 / 60) % 60;
+        var hours = Math.floor(rest / 1000 / 60 / 60) % 24;
+        var days = Math.floor(rest / 1000 / 60 / 60 / 24);
+        var count = [days, hours, min, sec];
+    
+        return count;
+    }
+    
+    var goal = new Date(2024, 0, 1);
+    
+    var recalc = function() {
+        var counter = countdown(goal);
+        document.getElementById('day').textContent = counter[0];
+        document.getElementById('hour').textContent = counter[1];
+        document.getElementById('min').textContent = counter[2];
+        document.getElementById('sec').textContent = counter[3];
+        refresh();
+    }
+    
+    var refresh = function() {
+        setTimeout(recalc, 1000);
+    }
+    recalc();
+
+    </script>
 </body>
 
 </html>
