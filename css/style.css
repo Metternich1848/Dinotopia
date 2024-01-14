@@ -1,6 +1,6 @@
 /********** Template CSS **********/
 :root {
-    --primary: #077c0d;
+    --success: #077c0d;
     --light: #EFF5FF;
     --dark: #1B2C51;
 }
@@ -47,7 +47,7 @@
     transition: .5s;
 }
 
-.btn.btn-primary,
+.btn.btn-success,
 .btn.btn-secondary {
     color: #FFFFFF;
 }
@@ -100,7 +100,7 @@
 
 .navbar .navbar-nav .nav-link:hover,
 .navbar .navbar-nav .nav-link.active {
-    color: var(--primary);
+    color: var(--success);
 }
 
 @media (max-width: 991.98px) {
@@ -191,8 +191,8 @@
 
 .header-carousel .owl-nav .owl-prev:hover,
 .header-carousel .owl-nav .owl-next:hover {
-    background: var(--primary);
-    border-color: var(--primary);
+    background: var(--success);
+    border-color: var(--success);
 }
 
 .header-carousel .owl-dots {
@@ -230,8 +230,8 @@
 }
 
 .header-carousel .owl-dot.active {
-    background: var(--primary);
-    border-color: var(--primary);
+    background: var(--success);
+    border-color: var(--success);
 }
 
 .page-header {
@@ -329,14 +329,14 @@
 
 .team-item .team-social .btn {
     display: inline-flex;
-    color: var(--primary);
+    color: var(--success);
     background: #FFFFFF;
     border-radius: 40px;
 }
 
 .team-item .team-social .btn:hover {
     color: #FFFFFF;
-    background: var(--primary);
+    background: var(--success);
 }
 
 
@@ -360,11 +360,11 @@
 
 .bootstrap-datetimepicker-widget table td.active,
 .bootstrap-datetimepicker-widget table td.active:hover {
-    background: var(--primary);
+    background: var(--success);
 }
 
 .bootstrap-datetimepicker-widget table td.today::before {
-    border-bottom-color: var(--primary);
+    border-bottom-color: var(--success);
 }
 
 
@@ -412,7 +412,7 @@
 }
 
 .testimonial-carousel .owl-item.center .testimonial-text {
-    background: var(--primary);
+    background: var(--success);
     transform: scale(1);
 }
 
@@ -426,7 +426,7 @@
 }
 
 .testimonial-carousel .owl-item.center .testimonial-item img {
-    background: var(--primary) !important;
+    background: var(--success) !important;
 } 
 
 .testimonial-carousel .owl-nav {
@@ -450,7 +450,7 @@
 .testimonial-carousel .owl-nav .owl-prev,
 .testimonial-carousel .owl-nav .owl-next {
     position: relative;
-    color: var(--primary);
+    color: var(--success);
     font-size: 45px;
     transition: .5s;
 }
@@ -475,7 +475,7 @@
 }
 
 .footer .btn.btn-social:hover {
-    color: var(--primary);
+    color: var(--success);
 }
 
 .footer .btn.btn-link {
@@ -499,7 +499,7 @@
 }
 
 .footer .btn.btn-link:hover {
-    color: var(--primary);
+    color: var(--success);
     letter-spacing: 1px;
     box-shadow: none;
 }
@@ -515,5 +515,5 @@
 }
 
 .footer .copyright a:hover {
-    color: var(--primary);
+    color: var(--success);
 }
