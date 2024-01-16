@@ -42,10 +42,147 @@
     <link rel="stylesheet" type="text/css" href="https://cdn.bootcss.com/font-awesome/4.6.0/css/font-awesome.min.css">
 
     <style>
-    /*Photo Corner*/
+    /*Photo Corner Start*/
         .corner {
     border-radius: 20px 20px;
     }
+    /* Photo Corner End*/
+
+    /* Hover Start */
+      body {
+            background-color: #353535
+        }
+
+        .box {
+            font-family: 'Ubuntu', sans-serif;
+            overflow: hidden;
+            position: relative;
+            transition: all 0.3s;
+        }
+
+        .box:hover {
+            box-shadow: 0 0 15px -5px #000;
+        }
+
+        .box:before {
+            content: '';
+            background-color: transparent;
+            background-image: radial-gradient(circle at 20% 80%, transparent 29%, rgba(255, 255, 255, 0.4) 30%, rgba(255, 255, 255, 0.4) 33%, transparent 34%), radial-gradient(circle at 80% 20%, transparent 29%, rgba(255, 255, 255, 0.4) 30%, rgba(255, 255, 255, 0.4) 33%, transparent 34%);
+            background-size: 30px 30px;
+            height: 100%;
+            width: 100%;
+            opacity: 0;
+            position: absolute;
+            left: 0;
+            top: 0;
+            z-index: 1;
+            transition: all 0.3s ease 0.2s;
+        }
+
+        .box:hover:before {
+            opacity: 1;
+        }
+
+        .box img {
+            width: 100%;
+            height: auto;
+            transition: all 0.3s ease 0s;
+        }
+
+        .box:hover img {
+            filter: blur(2px);
+        }
+
+        .box .box-content {
+            color: #fff;
+            background-color: rgba(0, 0, 0, 0.6);
+            text-align: center;
+            width: 100%;
+            height: 59%;
+            padding: 18% 0 0 0;
+            position: absolute;
+            left: 0;
+            top: -100%;
+            z-index: 2;
+            transition: all 0.3s ease 0s;
+        }
+
+        .box:hover .box-content {
+            top: 0;
+        }
+
+        .box .title {
+            color: #fff;
+            font-size: 23px;
+            font-weight: 600;
+            letter-spacing: 1px;
+            text-transform: uppercase;
+            margin: 0;
+        }
+
+        .box .post {
+            color: #32c287;
+            font-size: 14px;
+            font-style: italic;
+            text-transform: capitalize;
+            letter-spacing: 2px;
+        }
+
+        .box .icon {
+            background: rgba(50, 194, 135, 0.6);
+            text-align: center;
+            height: 39%;
+            width: 100%;
+            padding: 15px 0 0;
+            margin: 0;
+            list-style: none;
+            transform: translateX(50%);
+            position: absolute;
+            right: 50%;
+            bottom: -100%;
+            z-index: 1;
+            transition: all 0.3s;
+        }
+
+        .box:hover .icon {
+            bottom: 0;
+        }
+
+        .box .icon li {
+            display: inline-block;
+            margin: 0 3px;
+        }
+
+        .box .icon li a {
+            color: #32c287;
+            background-color: #fff;
+            font-size: 18px;
+            line-height: 40px;
+            height: 40px;
+            width: 40px;
+            border-radius: 40%;
+            display: block;
+            transition: all 0.3s;
+        }
+
+        .box .icon li a:hover {
+            color: #fff;
+            background-color: #04a562;
+            box-shadow: 0 0 0 3px rgba(255, 255, 255, 0.5), 0 0 5px rgba(0, 0, 0, 0.5) inset;
+        }
+
+        @media only screen and (max-width:990px) {
+            .box {
+                margin-bottom: 30px;
+            }
+        }
+
+        @media only screen and (max-width:479px) {
+            .box .title {
+                font-size: 20px;
+            }
+        }
+    /* Hover End */
 
     </style>
 </head>
@@ -64,7 +201,7 @@
         <div class="row gx-0 d-none d-lg-flex">
             <div class="col-lg-7 px-5 text-start">
                 <div class="h-100 d-inline-flex align-items-center py-3 me-4">
-                    <a class="fa fa-file-code-o" href="https://htmlcodex.com" style="font-size:24px; color:Blue;"></a>
+                    <a class="fa fa-file-code-o" href="https://htmlcodex.com" style="font-size:24px; color:yellow;"></a>
                     <small> &nbsp; Designed By <a class="border-bottom" href="https://htmlcodex.com">HTML Codex</a></small>
                 </div>
             </div>
@@ -274,13 +411,16 @@
                 <p class="d-inline-block border rounded-pill py-1 px-4" style="color: #077c0d">Dinosaurs</p>
                 <h1 style="color:green;">Most Popular Dinosaurs</h1>
             </div>
+
             <div class="row g-4">
                 <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.1s">
-                    <div class="service-item bg-light rounded h-100 p-5">
-                        <div class="d-inline-flex align-items-center justify-content-center bg-white rounded-circle mb-4" style="width: 65px; height: 65px;"></div>
-                        <h4 class="mb-3" style="color:green;">Tyrannosaurus Rex</h4>
-                        <p class="mb-4">Erat ipsum justo amet duo et elitr dolor, est duo duo eos lorem sed diam stet diam sed stet.<img class="img-fluid" src="img/Tyrannosaurus.jpg" alt=""></p>
-                        <a class="btn" href=""><i class="fa fa-plus text-success me-3"></i>Read More</a>
+                    <div class="box"><img src="img/Tyrannosaurus.jpg" alt="">
+                        <div class="box-content">
+                            <h3 class="title">Tyrannosaurus Rex</h3><span class="post">Cretaceous</span>
+                        </div>
+                        <ul class="icon">
+                            <li><a href="#"><i class="fa fa-link"></i></a></li>
+                        </ul>
                     </div>
                 </div>
                 <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.3s">
