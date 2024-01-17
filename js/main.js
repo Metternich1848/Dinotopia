@@ -59,6 +59,8 @@
     // Header carousel
     $(".header-carousel").owlCarousel({
         autoplay: true,
+        autoplayTimeout:2000,
+        autoplayHoverPause:true,
         animateOut: 'fadeOutLeft',
         items: 1,
         dots: true,
@@ -74,6 +76,8 @@
     // Testimonials carousel
     $(".testimonial-carousel").owlCarousel({
         autoplay: true,
+        autoplayTimeout:2000,
+        autoplayHoverPause:true,
         smartSpeed: 1000,
         center: true,
         dots: false,
