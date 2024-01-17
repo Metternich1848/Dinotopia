@@ -42,6 +42,21 @@
     <link rel="stylesheet" type="text/css" href="https://cdn.bootcss.com/font-awesome/4.6.0/css/font-awesome.min.css">-->
 
     <style>
+    /*Full Screen Start*/
+        .bg {
+            position: fixed;
+            top: 0;
+            left: 0;
+            bottom: 0;
+            right: 0;
+            z-index: -999;
+        }
+        .bg img {
+            height: 100%;
+            width: 100%;
+        }
+    /*Full Screen End*/
+
     /*Photo Corner Start*/
         .corner {
     border-radius: 20px 20px;
@@ -186,6 +201,10 @@
 </head>
 
 <body>
+    <div class="bg">
+        <img src="img/whiteBg.jpg">
+    </div>
+    
     <!-- Spinner Start -->
     <div id="spinner" class="show bg-white position-fixed translate-middle w-100 vh-100 top-50 start-50 d-flex align-items-center justify-content-center">
         <div class="spinner-grow text-success" style="width: 3rem; height: 3rem;" role="status">
