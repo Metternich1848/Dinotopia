@@ -216,6 +216,84 @@
         }
     /* Hover End */
 
+    /* Hover Button Start */
+.hbutton {
+  display: flex;
+}
+
+.hbox {
+  width: 35px;
+  height: 40px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 15px;
+  font-weight: 700;
+  color: #fff;
+  transition: all .8s;
+  cursor: pointer;
+  position: relative;
+  background: rgb(7, 124, 13);
+  overflow: hidden;
+  border-radius: 20px 20px;
+}
+
+.hbox:before {
+  content: "A";
+  position: absolute;
+  top: 0;
+  background: #e60a2e;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transform: translateY(100%);
+  transition: transform .4s;
+}
+
+.hbox:nth-child(2)::before {
+  transform: translateY(-100%);
+  content: 'l';
+}
+
+.hbox:nth-child(3)::before {
+  content: 'i';
+}
+
+.hbox:nth-child(4)::before {
+  transform: translateY(-100%);
+  content: 'e';
+}
+
+.hbox:nth-child(5)::before {
+  content: 'n';
+}
+
+.hbox:nth-child(6)::before {
+  transform: translateY(-100%);
+  content: 'o';
+}
+
+.hbox:nth-child(7)::before {
+  content: 'p';
+}
+
+.hbox:nth-child(8)::before {
+  transform: translateY(-100%);
+  content: 'i';
+}
+
+.hbox:nth-child(9)::before {
+  content: 'a';
+}
+
+.hbutton:hover .hbox:before {
+  transform: translateY(0);
+}
+
+/* Hover Button End */
+
     </style>
 </head>
 
@@ -440,6 +518,17 @@
                         </div>
                     </div>
                     <div class="col-lg-6 wow fadeIn" data-wow-delay="0.5s">
+                        <div class="hbutton">
+                            <div class="hbox">D</div>
+                            <div class="hbox">i</div>
+                            <div class="hbox">n</div>
+                            <div class="hbox">o</div>
+                            <div class="hbox">t</div>
+                            <div class="hbox">o</div>
+                            <div class="hbox">p</div>
+                            <div class="hbox">i</div>
+                            <div class="hbox">a</div>
+                        </div>
                         <iframe width="630" height="353" class="corner" src="https://www.youtube.com/embed/haEwIl9QJmI?si=K6P5iqFExQ9ba0WN" title="YouTube video player" frameborder="0" 
                         allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
                     </div>
