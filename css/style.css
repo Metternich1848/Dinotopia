@@ -305,7 +305,7 @@
 }
 
 .team-item:hover img {
-    top: -30px;
+    top: -5px;
 }
 
 .team-item .team-text {
@@ -315,7 +315,7 @@
 }
 
 .team-item:hover .team-text {
-    margin-top: -60px;
+    margin-top: -30px;
     height: 160px;
 }
 
@@ -331,12 +331,12 @@
 .team-item .team-social .btn {
     display: inline-flex;
     color: var(--success);
-    background: #FFFFFF;
+    /* background: #FFFFFF; */
     border-radius: 40px;
 }
 
 .team-item .team-social .btn:hover {
-    color: #FFFFFF;
+    /* color: #FFFFFF; */
     background: var(--success);
 }
 
