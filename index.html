@@ -334,6 +334,50 @@
         }
     /* Popup End */
 
+/* Flip Card Start */
+.flip-card {
+  background-color: transparent;
+  width: 65px;
+  height: 65px;
+  perspective: 1000px;
+  display: inline-block;
+}
+
+.flip-card-inner {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  transition: transform 0.6s;
+  transform-style: preserve-3d;
+  box-shadow: none;
+}
+
+.flip-card:hover .flip-card-inner {
+  transform: rotateY(180deg);
+}
+
+.flip-card-front, .flip-card-back {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+}
+
+.flip-card-front {
+  background-color: transparent;
+  color: transparent;
+}
+
+.flip-card-back {
+  background-color: transparent;
+  color: transparent;
+  transform: rotateY(180deg);
+}
+
+/* Flip Card End */
+
     </style>
 </head>
 
@@ -458,8 +502,19 @@
     <div class="container-fluid header bg-success p-0 mb-5">
         <div class="row g-0 align-items-center flex-column-reverse flex-lg-row">
             <div class="col-lg-6 p-5 wow fadeIn" data-wow-delay="0.1s">
-                <h1 class="display-4 text-white mb-5">“We are just another kind of dinosaur trying to survive in this world.” <img width="90" height="90" src="https://img.icons8.com/external-photo3ideastudio-gradient-photo3ideastudio/64/000000/external-dinosaur-museum-photo3ideastudio-gradient-photo3ideastudio.png"></h1>
-                
+                <h1 class="display-4 text-white mb-5">“We are just another kind of dinosaur trying to survive in this world.” 
+                    <div class="flip-card">
+                        <div class="flip-card-inner">
+                        <div class="flip-card-front">
+                            <img width="90" height="90" src="https://img.icons8.com/external-photo3ideastudio-gradient-photo3ideastudio/64/000000/external-dinosaur-museum-photo3ideastudio-gradient-photo3ideastudio.png">
+                        </div>
+                        <div class="flip-card-back">
+                            <img width="90" height="90" src="https://img.icons8.com/external-photo3ideastudio-lineal-color-photo3ideastudio/64/external-dinosaur-museum-photo3ideastudio-lineal-color-photo3ideastudio.png">
+                        </div>
+                        </div>
+                    </div>
+                </h1>
+
                 <audio controls autoplay>
                     <source src="dinoAudio/angryDino.mp3" type="audio/mp3">
                 </audio>
@@ -527,7 +582,18 @@
                 </div>
                 <div class="col-lg-6 wow fadeIn" data-wow-delay="0.5s">
                     <a href="https://en.wikipedia.org/wiki/Mesozoic"><p class="d-inline-block border rounded-pill py-1 px-4" style="color: #077c0d">Mesozoic</p></a>
-                    <img width="85" height="85" src="https://img.icons8.com/external-flat-icons-maxicons/85/000000/external-ancient-the-lost-world-flat-flat-icons-maxicons-8.png">
+                   
+                    <div class="flip-card">
+                        <div class="flip-card-inner">
+                          <div class="flip-card-front">
+                            <img width="65" height="65" src="https://img.icons8.com/external-flat-icons-maxicons/85/000000/external-ancient-the-lost-world-flat-flat-icons-maxicons-8.png" alt="Avatar" style="width:85px;height:85px;">
+                          </div>
+                          <div class="flip-card-back">
+                            <img width="85" height="85" src="https://img.icons8.com/external-filled-outline-icons-maxicons/85/external-ancient-the-lost-world-filled-outline-filled-outline-icons-maxicons-18.png">
+                          </div>
+                        </div>
+                    </div>
+
                     <h1 class="mb-4" style="color: #077c0d">The Mysterious Mesozoic: The Age of Reptiles!</h1>
                     <p id="textBackground" style="color:rgb(63, 48, 6);">Deriving from the Greek words " meso" and "zoon", the term "Mesozoic" refers to a geological era that roughly extended from about
                          252 million years ago to around 66 million years ago. This time span is divided into three major dinosaur periods, the Triassic, Jurassic and Cretaceous ages. 
@@ -549,7 +615,18 @@
                 <div class="row g-5">
                     <div class="col-lg-6 wow fadeIn" data-wow-delay="0.1s">
                         <p class="d-inline-block border rounded-pill py-1 px-4" style="color: #077c0d">Cartoon</p>
-                         <img width="85" height="85" src="https://img.icons8.com/external-flat-icons-maxicons/85/000000/external-ancient-the-lost-world-flat-flat-icons-maxicons-11.png">
+
+                        <div class="flip-card">
+                            <div class="flip-card-inner">
+                              <div class="flip-card-front">
+                                <img width="85" height="85" src="https://img.icons8.com/external-flat-icons-maxicons/85/000000/external-ancient-the-lost-world-flat-flat-icons-maxicons-11.png">
+                              </div>
+                              <div class="flip-card-back">
+                                <img width="85" height="85" src="https://img.icons8.com/external-filled-outline-icons-maxicons/85/external-ancient-the-lost-world-filled-outline-filled-outline-icons-maxicons-7.png">
+                              </div>
+                            </div>
+                        </div>
+
                         <div class="d-flex flex-column">
                             <h1 class="mb-4" style="color:#077c0d">Animal Crossing: Dino Museum</h1>
                             <p id="textBackground" style="color:rgb(63, 48, 6);">Alientopia is a website where you can find everything related to travel, animals and novels. Every now and then, 
@@ -582,7 +659,18 @@
         <div class="container">
             <div class="text-center mx-auto mb-5 wow fadeInUp" data-wow-delay="0.1s" style="max-width: 600px;">
                 <p class="d-inline-block border rounded-pill py-1 px-4" style="color: #077c0d">Dinosaurs</p>
-                 <img width="85" height="85" src="https://img.icons8.com/external-filled-outline-icons-maxicons/85/000000/external-allosaurus-the-lost-world-filled-outline-filled-outline-icons-maxicons.png">
+
+                <div class="flip-card">
+                    <div class="flip-card-inner">
+                      <div class="flip-card-front">
+                        <img width="65" height="65" src="https://img.icons8.com/external-filled-outline-icons-maxicons/85/000000/external-allosaurus-the-lost-world-filled-outline-filled-outline-icons-maxicons.png" alt="Avatar" style="width:85px;height:85px;">
+                      </div>
+                      <div class="flip-card-back">
+                        <img width="85" height="85" src="https://img.icons8.com/external-flat-icons-maxicons/85/external-ancient-the-lost-world-flat-flat-icons-maxicons-12.png">
+                      </div>
+                    </div>
+                </div>
+              
                 <h1 style="color:green;">Most Popular Dinosaurs</h1>
             </div>
 
@@ -789,7 +877,6 @@
                                       <h1 style="color:green;">Hallucigenia</h1>
                                       <p style="text-align: justify;">This is a popup box!This is a popup box!This is a popup box!This is a popup box!This is a popup box!This is a popup box!This is a popup box!This is a popup box!</p>
                                       <button id="closePopup">Close</button>
-                                      
                                 </div>
                              </div>
 
