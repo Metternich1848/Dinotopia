@@ -370,6 +370,68 @@
 
 /* Zoom Image End */
 
+/* cBanner Start */
+
+@-webkit-keyframes scroll {
+  0% {
+    -webkit-transform: translateX(0);
+            transform: translateX(0);
+  }
+  100% {
+    -webkit-transform: translateX(calc(-250px * 7));
+            transform: translateX(calc(-250px * 7));
+  }
+}
+
+@keyframes scroll {
+  0% {
+    -webkit-transform: translateX(0);
+            transform: translateX(0);
+  }
+  100% {
+    -webkit-transform: translateX(calc(-250px * 7));
+            transform: translateX(calc(-250px * 7));
+  }
+}
+.slider {
+  background: transparent;
+  box-shadow: 0 10px 20px -5px rgba(0, 0, 0, 0.125);
+  height: 100px;
+  margin: auto;
+  overflow: hidden;
+  position: relative;
+  width: 480px;
+}
+.slider::before, .slider::after {
+  background: linear-gradient(to right, white 0%, rgba(255, 255, 255, 0) 100%);
+  content: "";
+  height: 100px;
+  position: absolute;
+  width: 200px;
+  z-index: 2;
+}
+.slider::after {
+  right: 0;
+  top: 0;
+  -webkit-transform: rotateZ(180deg);
+          transform: rotateZ(180deg);
+}
+.slider::before {
+  left: 0;
+  top: 0;
+}
+.slider .slide-track {
+  -webkit-animation: scroll 40s linear infinite;
+          animation: scroll 40s linear infinite;
+  display: flex;
+  width: calc(150px * 5);
+}
+.slider .slide {
+  height: 100px;
+  width: 250px;
+}
+/* cBanner End */
+
     </style>
 </head>
 
@@ -654,6 +716,54 @@
                         <iframe width="630" height="353" class="corner" src="https://www.youtube.com/embed/Do6k1sefCxY?si=2oqepjPFF4_3sUlx" title="YouTube video player" frameborder="0" 
                         allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
                     </div>
+                    <div class="col-lg-6 wow fadeIn" data-wow-delay="0.5s">
+                        <div class="slider">
+                            <div class="slide-track">
+                                <div class="slide">
+                                    <img src="https://img.icons8.com/external-filled-outline-icons-maxicons/85/external-ancient-the-lost-world-filled-outline-filled-outline-icons-maxicons-11.png"  height="85" width="85" alt="" />
+                                </div>
+                                <div class="slide">
+                                    <img src="https://img.icons8.com/external-filled-outline-icons-maxicons/85/external-ancient-the-lost-world-filled-outline-filled-outline-icons-maxicons-20.png" height="85" width="85" alt="" />
+                                </div>
+                                <div class="slide">
+                                    <img src="https://img.icons8.com/external-filled-outline-icons-maxicons/85/external-ancient-the-lost-world-filled-outline-filled-outline-icons-maxicons-13.png" height="85" width="85" alt="" />
+                                </div>
+                                <div class="slide">
+                                    <img src="https://img.icons8.com/external-filled-outline-icons-maxicons/85/external-ancient-the-lost-world-filled-outline-filled-outline-icons-maxicons-21.png" height="85" width="85" alt="" />
+                                </div>
+                                <div class="slide">
+                                    <img src="https://img.icons8.com/external-flat-icons-maxicons/85/external-ancient-the-lost-world-flat-flat-icons-maxicons-8.png"  height="85" width="85" alt="" />
+                                </div>
+                                <!--<div class="slide">
+                                    <img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/557257/6.png" height="100" width="250" alt="" />
+                                </div>
+                                <div class="slide">
+                                    <img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/557257/7.png" height="100" width="250" alt="" />
+                                </div>
+                                <div class="slide">
+                                    <img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/557257/1.png" height="100" width="250" alt="" />
+                                </div>
+                                <div class="slide">
+                                    <img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/557257/2.png" height="100" width="250" alt="" />
+                                </div>
+                                <div class="slide">
+                                    <img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/557257/3.png" height="100" width="250" alt="" />
+                                </div>
+                                <div class="slide">
+                                    <img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/557257/4.png" height="100" width="250" alt="" />
+                                </div>
+                                <div class="slide">
+                                    <img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/557257/5.png" height="100" width="250" alt="" />
+                                </div>
+                                <div class="slide">
+                                    <img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/557257/6.png" height="100" width="250" alt="" />
+                                </div>
+                                <div class="slide">
+                                    <img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/557257/7.png" height="100" width="250" alt="" />
+                                </div>-->
+                            </div>
+                        </div>
+                    </div>    
                 </div>
             </div>
         </div>
