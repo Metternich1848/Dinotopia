@@ -432,6 +432,43 @@
 }
 /* cBanner End */
 
+/* Popup Start */
+    .popup {
+            position: fixed;
+            z-index: 1;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            overflow: auto;
+            background-color: transparent;
+            display: none;
+        }
+        .popup-content {
+            background-color: #F7DC6F;
+            margin: 10% auto;
+            padding: 20px;
+            border: transparent;
+            width: 30%;
+            font-weight: bolder;
+        }
+        .popup-content button {
+            display: block;
+            margin: 0 auto;
+            color:#F7DC6F;
+            background-color: #04AA6D; /* Green */
+            cursor: pointer;
+            border-radius: 12px;
+
+        }
+        .show {
+            display: block;
+        }
+        h1 {
+            color: green;
+        }
+/* Popup End */
+
     </style>
 </head>
 
@@ -998,7 +1035,17 @@
     <div class="container-xxl py-5">
         <div class="container">
             <div class="text-center mx-auto mb-5 wow fadeInUp" data-wow-delay="0.1s" style="max-width: 600px;">
-                <p class="d-inline-block border rounded-pill py-1 px-4" style="color:green;">Paleozoic Era</p>
+                <!--<p class="d-inline-block border rounded-pill py-1 px-4" style="color:green;">Paleozoic Era</p>-->
+                <!--<div class="team-social text-center">-->
+                    <p class="d-inline-block"><button id="myButton" type="button" class="btn btn-outline-success rounded-pill">Paleozoic Era</button></p>
+                    <div id="myPopup" class="popup">
+                        <div class="popup-content corner">
+                            <h1 style="color:green;">Hallucigenia</h1>
+                            <p style="text-align: justify;">This is a popup box!This is a popup box!This is a popup box!This is a popup box!This is a popup box!This is a popup box!This is a popup box!This is a popup box!</p>
+                            <button id="closePopup">Close</button>
+                        </div>
+                    </div>
+                <!--</div>-->
                 <div class="flip-card">
                     <div class="flip-card-inner">
                     <div class="flip-card-front">
@@ -1168,6 +1215,22 @@
     <!-- Template Javascript -->
     <script src="js/main.js"></script>
 
+    <!-- Popup Start -->
+        <script>
+            myButton.addEventListener("click", function () {
+                myPopup.classList.add("show");
+            });
+            closePopup.addEventListener("click", function () {
+                myPopup.classList.remove("show");
+            });
+            window.addEventListener("click", function (event) {
+                if (event.target == myPopup) {
+                    myPopup.classList.remove("show");
+                }
+            });
+            
+            </script>
+    <!-- Popup End -->
 </body>
 
 </html>
