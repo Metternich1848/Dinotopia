@@ -470,6 +470,15 @@
         }
 /* Popup End */
 
+/* Image Show Onclick Start */
+
+        /* Set display to none for image*/
+        #image {
+            display: none;
+            width: 100px; 
+            }
+/* Image Show Onclick End */
+
     </style>
 </head>
 
@@ -720,7 +729,7 @@
                 <div class="row g-5">
                     <div class="col-lg-6 wow fadeIn" data-wow-delay="0.1s">
                         <!--<p class="d-inline-block border rounded-pill py-1 px-4" style="color: #077c0d">Animation</p>-->
-                        <button type="button" class="btn btn-outline-success rounded-pill">Animation</button>
+                        <a href="https://www.youtube.com/channel/UCiZAufhme0zg9dSVaDlHFDA"><button type="button" class="btn btn-outline-success rounded-pill">Animation</button></a>
                         <div class="flip-card">
                             <div class="flip-card-inner">
                               <div class="flip-card-front">
@@ -813,7 +822,7 @@
         <div class="container">
             <div class="text-center mx-auto mb-5 wow fadeInUp" data-wow-delay="0.1s" style="max-width: 600px;">
                 <!--<p class="d-inline-block border rounded-pill py-1 px-4" style="color: #077c0d">Dinosaurs</p>-->
-                <button type="button" class="btn btn-outline-success rounded-pill">Dinosaurs</button>
+                <a href="https://www.nhm.ac.uk/discover/what-are-dinosaurs.html"><button type="button" class="btn btn-outline-success rounded-pill">Dinosaurs</button></a>
                 <div class="flip-card">
                     <div class="flip-card-inner">
                       <div class="flip-card-front">
@@ -934,7 +943,8 @@
                 <div class="col-lg-6 feature-text py-5 wow fadeIn" data-wow-delay="0.1s">
                     <div class="p-lg-5 ps-lg-0">
                         <!--<p class="d-inline-block border rounded-pill py-1 px-4" style="color: #077c0d">Amber</p>-->
-                        <button type="button" class="btn btn-outline-success rounded-pill">Amber</button>
+                        <img id="image" class="corner" src="img/AmberHeard.jpg">
+                        <button type="button" onclick="show()" id="btnID" class="btn btn-outline-success rounded-pill">Amber</button>
                         <div class="flip-card">
                             <div class="flip-card-inner">
                               <div class="flip-card-front">
@@ -1234,6 +1244,20 @@
             
             </script>
     <!-- Popup End -->
+
+    <!-- Image Show Onclick Start -->
+    <script>
+        function show() {
+            /* Access image by id and change 
+            the display property to block*/
+            document.getElementById('image')
+                .style.display = "block";
+            document.getElementById('btnID')
+                .style.display = "none";
+        }
+    </script>
+     <!-- Image Show Onclick End -->
+
 </body>
 
 </html>
